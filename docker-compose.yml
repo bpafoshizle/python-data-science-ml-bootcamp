@@ -1,6 +1,7 @@
 version: '3'
 services:
     conda:
+        #build: .
         image: "continuumio/anaconda3"
         ports:
             - "8888:8888"
