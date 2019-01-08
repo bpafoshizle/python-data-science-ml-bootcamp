@@ -6,5 +6,5 @@ services:
         ports:
             - "8888:8888"
         volumes:
-            - ~/github/local/python-data-science-ml-bootcamp/notebooks:/opt/notebooks
-        command: /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+            - ./notebooks:/opt/notebooks
+        command: /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root"
