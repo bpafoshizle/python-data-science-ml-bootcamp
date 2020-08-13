@@ -6,5 +6,9 @@ RUN conda create -n tf-gpu tensorflow-gpu -y
 #RUN conda activate tf-gpu
 SHELL ["conda", "run", "-n", "tf-gpu", "/bin/bash", "-c"]
 RUN conda install jupyter -y --quiet
-RUN conda install ipykernel
+RUN conda install ipykernel -y
+RUN conda install pandas -y
 RUN python -m ipykernel install --user --name python-tf-gpu --display-name "Python (tf-gpu)"
+RUN conda install seaborn -y
+RUN conda install scikit-learn -y
+RUN conda install tensorboard
